@@ -24,7 +24,7 @@ class SignIn extends React.Component {
             .then (res => {
                 console.log('response data from login', res.data);
                 localStorage.setItem('jwt', res.data.token);
-            }).then(this.history.push('/users'))
+            })
             .catch( err => {
                 console.log('err from login', err);
             });
